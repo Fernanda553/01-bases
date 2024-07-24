@@ -19,9 +19,9 @@ export const CounterBy = ({initialValue = 5}: Props) => {
 
 
   const handleClick = (value: number) => {
-    setCounterState(prev => ({
-      counter: prev.counter + value,
-      clicks: prev.clicks + 1
+    setCounterState(({counter, clicks}) => ({
+      counter: counter + value,
+      clicks: clicks + 1
     }))
   }
   return (
